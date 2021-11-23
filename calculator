@@ -1,0 +1,228 @@
+import turtle
+
+screen = turtle.Screen()
+
+pen = turtle.Turtle()
+pen.hideturtle()
+
+funt=("Source Code Pro",15,"normal") 
+
+pen.pensize(2)
+pen.speed(0)
+
+pen.goto(0, 0)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(10, 7)
+pen.write("7", font=(funt))
+
+pen.goto(30, 0)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(40, 7)
+pen.write("8", font=(funt))
+
+pen.goto(60, 0)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(70, 7)
+pen.write("9", font=(funt))
+
+pen.goto(90, 0)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(100, 7)
+pen.write("X", font=(funt))
+
+
+pen.goto(0, -30)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(10, -23)
+pen.write("4", font=(funt))
+
+pen.goto(30, -30)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(40, -23)
+pen.write("5", font=(funt))
+
+pen.goto(60, -30)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(70, -23)
+pen.write("6", font=(funt))
+
+pen.goto(90, -30)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(100, -23)
+pen.write("-", font=(funt))
+
+
+pen.goto(0, -60)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(10, -53)
+pen.write("1", font=(funt))
+
+pen.goto(30, -60)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(40, -53)
+pen.write("2", font=(funt))
+
+pen.goto(60, -60)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(70, -53)
+pen.write("3", font=(funt))
+
+
+pen.goto(0, -90)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(10, -83)
+pen.write("0", font=(funt))
+
+pen.goto(30, -90)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(40, -83)
+pen.write(".", font=(funt))
+
+pen.goto(60, -90)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(30)
+  pen.left(90)
+pen.penup()
+pen.goto(70, -83)
+pen.write("=", font=(funt))
+
+pen.goto(90, -90)
+pen.pendown()
+for i in range(2):
+  pen.forward(30)
+  pen.left(90)
+  pen.forward(60)
+  pen.left(90)
+pen.penup()
+pen.goto(100, -68)
+pen.write("+", font=(funt))
+
+
+answer = ""
+equation = ""
+def btnclick(x, y):
+  global equation
+  global answer
+  
+  if x >= 0 and x <= 30 and y >= 0 and y <= 30:
+    equation += "7"
+  if x >= 30 and x <= 60 and y >= 0 and y <= 30:
+    equation += "8"
+  if x >= 60 and x <= 90 and y >= 0 and y <= 30:
+    equation += "9"
+  if x >= 90 and x <= 120 and y >= 0 and y <= 30:
+    equation += "X"
+  if x >= 0 and x <= 30 and y >= -30 and y <= 0:
+    equation += "4"
+  if x >= 30 and x <= 60 and y >= -30 and y <= 0:
+    equation += "5"
+  if x >= 60 and x <= 90 and y >= -30 and y <= 0:
+    equation += "6"
+  if x >= 90 and x <= 120 and y >= -30 and y <= 0:
+    equation += "-"
+  if x >= 0 and x <= 30 and y >= -60 and y <= -30:
+    equation += "1"
+  if x >= 30 and x <= 60 and y >= -60 and y <= -30:
+    equation += "2"
+  if x >= 60 and x <= 90 and y >= -60 and y <= -30:
+    equation += "3"
+  if x >= 0 and x <= 30 and y >= -90 and y <= -60:
+    equation += "0"
+  if x >= 30 and x <= 60 and y >= -90 and y <= -60:
+    equation += "."
+  if x >= 90 and x <= 120 and y >= -90 and y <= -30:
+    equation += "+"
+  if x >= 60 and x <= 90 and y >= -90 and y <= -60:
+    print("=")
+    answer = eval(equation)
+  print(equation)
+  print(answer)
+
+
+
+screen.onscreenclick(btnclick, 1)
+screen.listen()
+
+
+turtle.done()
